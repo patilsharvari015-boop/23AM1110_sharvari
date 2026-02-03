@@ -13,8 +13,8 @@ jobs:
        with:
 	python-version: "3.11"
 
-       -name: Install dependencies
-	run: pip install -r requirements.txt
+      - name: Install dependencies
+	run: pip install -r requirement.txt
 
        -name: Run trining script
 	run: python train.py
