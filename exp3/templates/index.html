@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heart Disease Prediction</title>
+</head>
+
+<body>
+
+<h2>Heart Disease Prediction</h2>
+
+<form action="/predict" method="post">
+
+Age:<br>
+<input type="number" name="age" required><br><br>
+
+Sex (0 = Female, 1 = Male):<br>
+<input type="number" name="sex" required><br><br>
+
+Chest Pain Type:<br>
+<input type="number" name="cp" required><br><br>
+
+Resting Blood Pressure:<br>
+<input type="number" name="trestbps" required><br><br>
+
+Cholesterol:<br>
+<input type="number" name="chol" required><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+<br>
+
+<h3>{{ prediction }}</h3>
+
+</body>
+</html>
