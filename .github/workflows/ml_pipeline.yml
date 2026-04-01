@@ -1,0 +1,20 @@
+name: ML Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r Exp2/requirement.txt
+
+      - name: Run training script
+        run: python Exp2/train.py
